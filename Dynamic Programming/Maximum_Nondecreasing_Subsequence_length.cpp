@@ -1,7 +1,7 @@
 /*
-    Problem Link : https://www.spoj.com/problems/DIEHARD/
+    Problem Link : https://codeforces.com/problemset/problem/580/A
+    Problem Name : Kefa and First Steps
 */
-
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -35,32 +35,30 @@ typedef map<ll,int> mli;
 #define vsort(v) sort(v.begin(),v.end())
 #define intscan(a) scanf("%d",&a)
 #define llscan(a) scanf("%lld",&a)
-#define println(a) printf("%d\n",a)
+#define intprintln(a) printf("%d\n",a)
 #define llprintln(a) printf("%lld\n",a)
 #define intprints(a) printf("%d ",a)
 #define llprints(a) printf("%lld ",a)
 #define coutln(a) cout<<a<<endl
 #define couts(a) cout<<a<<" "
 #define cout(a) cout<<a
-int dp[1005][1005];
-int func(int x,int y,bool flag){
-    if(x<=0 || y<=0)
-        return 0;
-    if(dp[x][y]!=-1)
-        return dp[x][y];
-    if(flag)
-        return dp[x][y] = max(dp[x][y],1+func(x+3,y+2,0));
-    return dp[x][y] = max(dp[x][y],1 + max(func(x-5,y-10,1),func(x-20,y+5,1)));
-}
 int main(){
     ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL);
-    int t;
-    cin>>t;
-    f(i,0,t){
-        int m,n;
-        cin>>m>>n;
-        memset(dp,-1,sizeof(dp));
-        println(func(m,n,1)-1);
+    int n;
+    cin>>n;
+    int a[n];
+    f(i,0,n)
+        cin>>a[i];
+    int maxi = 1,max_count=1;
+    f(i,1,n){
+        if(a[i]>=a[i-1]){
+            max_count++;
+            if(maxi < max_count)
+                maxi = max_count;
+        }
+        else
+            max_count = 1;
     }
+    coutln(maxi);
     return 0;
-} 
+}

@@ -1,6 +1,8 @@
 /*
     Problem Link : https://www.hackerrank.com/challenges/coin-change/problem
+    Problem Name : The Coin change Problem
 */
+
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;

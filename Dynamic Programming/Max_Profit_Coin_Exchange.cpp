@@ -1,7 +1,7 @@
 /*
-    Problem Link : https://codeforces.com/problemset/problem/580/A
+    Problem Link : https://www.spoj.com/problems/COINS/
+    Problem Name : Bytelandian gold coins
 */
-
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
@@ -27,6 +27,7 @@ typedef map<int,ll> mil;
 typedef map<ll,int> mli;
 #define endl "\n"
 #define pb push_back
+#define forever for(;;)
 #define f(i,k,n) for(int i=k;i<n;i++)
 #define ef(i,k,n) for(int i=k;i<=n;i++)
 #define fl(i,k,n) for(ll i=k;i<n;i++)
@@ -34,31 +35,30 @@ typedef map<ll,int> mli;
 #define vsort(v) sort(v.begin(),v.end())
 #define intscan(a) scanf("%d",&a)
 #define llscan(a) scanf("%lld",&a)
-#define intprintln(a) printf("%d\n",a)
+#define println(a) printf("%d\n",a)
 #define llprintln(a) printf("%lld\n",a)
-#define intprints(a) printf("%d ",a)
+#define prints(a) printf("%d ",a)
 #define llprints(a) printf("%lld ",a)
 #define coutln(a) cout<<a<<endl
 #define couts(a) cout<<a<<" "
 #define cout(a) cout<<a
+mil dp;
+ll func(int n){
+    if(n==1)
+        return 1;
+    if(n<=0)
+        return 0;
+    if(dp[n])
+        return dp[n];
+    return dp[n] = max(ll(n),func(n/2)+func(n/3)+func(n/4));
+}
 int main(){
     ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL);
     int n;
-    cin>>n;
-    int a[n];
-    f(i,0,n)
-        cin>>a[i];
-    int maxi = 1,max_count=1;
-    f(i,1,n){
-        if(a[i]>=a[i-1]){
-            max_count++;
-            if(maxi < max_count)
-                maxi = max_count;
-            //couts(a[i])
-        }
-        else
-            max_count = 1;
+    forever{
+        if(intscan(n)!=1)
+            break;
+        llprintln(func(n));
     }
-    coutln(maxi);
     return 0;
-}
+} 
