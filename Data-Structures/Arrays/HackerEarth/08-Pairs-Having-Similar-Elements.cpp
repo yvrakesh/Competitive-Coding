@@ -5,6 +5,10 @@
               2. Check continuous elements if they're equal or difference is 1.
               3. Check if all elements are equal but there's no element with difference 1. (Then they shouldn't be counted)
               4. Now it's selecting 2 pairs from n pairs i.e nC2 or (n * (n-1))/2
+	
+	Time Complexity : O(n * logn)
+
+	Space Complexity : O(1)
 */
 #include<bits/stdc++.h>
 using namespace std;
