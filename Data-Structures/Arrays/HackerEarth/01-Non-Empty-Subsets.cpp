@@ -5,7 +5,7 @@
     Reason : Because Bitwise OR with a number will be always greater than or equal to that number.
 
              Hence to get minimum K, Size of Non Empty Subset must be 1.
-
+ 
     Time Complexity : O(n)
 
     Space Complexity : O(1)
