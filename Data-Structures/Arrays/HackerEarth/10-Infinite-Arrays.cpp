@@ -15,7 +15,7 @@ typedef long long int ll;
 ll p = 1000000007;
 int main(){
 	ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    	cin.tie(NULL);
 	int t;
 	cin>>t;
 	for(int i=0;i<t;i++){
