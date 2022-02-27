@@ -1,3 +1,4 @@
+/* Problem Link : https://practice.geeksforgeeks.org/problems/prime-number2314/1 */
 #include<bits/stdc++.h>
 using namespace std;
 bool is_prime(int n){
