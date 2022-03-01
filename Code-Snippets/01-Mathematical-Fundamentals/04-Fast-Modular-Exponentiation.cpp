@@ -1,3 +1,7 @@
+/* Question Link : https://leetcode.com/problems/count-good-numbers/
+
+    Time Complexity : O(logn)
+*/
 #include<iostream>
 using namespace std;
 typedef long long int ll;
