@@ -6,7 +6,7 @@ ll mod_exp_recur(ll a,ll n, ll p){
         return 1;
     if(n%2)
         return (a*mod_exp_recur(a,n-1,p))%p;
-    return mod_exp_recur((a*a)%p,n/2,p)%p;
+    return mod_exp_recur((a*a)%p,n>>1,p)%p; // n/2 -> Left shifting n by 1 step
 }
 ll mod_exp_iter(ll a, ll n, ll p){
     ll res = 1;
@@ -17,7 +17,7 @@ ll mod_exp_iter(ll a, ll n, ll p){
         }
         else{
             a = (a*a)%p;
-            n /= 2;
+            n = n>>1; // n = n/2
         }
     }
     return res;
