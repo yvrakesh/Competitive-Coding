@@ -1,4 +1,4 @@
-/* Question Link: https://leetcode.com/tag/prefix-sum
+/* Question Link: https://leetcode.com/problems/running-sum-of-1d-array/
 
     Time Complexity : O(n)
 */
